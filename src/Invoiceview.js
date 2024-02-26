@@ -48,7 +48,7 @@ function Invoiceview() {
 
         <div class="d-flex">
             <div class="logo">
-                <img src="logoPath" alt="Logo" />
+                <img src="https://github.com/AJ-ES/project-m-client/blob/master/public/logo.png?raw=true" alt="Logo" />
             </div>
             <div class="comAddress">
                 <p class="companyname1">

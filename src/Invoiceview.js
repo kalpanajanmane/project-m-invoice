@@ -6,7 +6,7 @@ import QRCode from "qrcode.react";
 function Invoiceview() {
   const [invoice, setInvoice] = useState(null);
   const { id } = useId(); // Retrieve the invoice ID from context
-  const qrCodeValue = "https://www.thegapindustries.com";
+  const qrCodeValue = `https://project-m-invoice.vercel.app/${id}`;
 
   useEffect(() => {
     const fetchInvoice = async () => {

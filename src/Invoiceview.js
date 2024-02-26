@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useId } from "./IdContext";
-import QRCode from "qrcode.react";
 
 function Invoiceview() {
   const [invoice, setInvoice] = useState(null);
   const { id } = useId(); // Retrieve the invoice ID from context
-  const qrCodeValue = "https://www.thegapindustries.com";
 
   useEffect(() => {
     const fetchInvoice = async () => {
@@ -26,7 +24,6 @@ function Invoiceview() {
 
   return (
     <div>
-        
       {invoice ? (
         <div className="invoice">
           <h2>Invoice No: {invoice.invoicedetails.invoiceno}</h2>
@@ -112,9 +109,7 @@ function Invoiceview() {
           <div className="preSignedUrl">
             <p>Pre-Signed URL: {invoice.preSignedUrl}</p>
           </div>
-          <QRCode value={qrCodeValue} size={256} fgColor="#000" />
-        </div> 
-        
+        </div>
       ) : (
         <p>No invoice found with the provided ID</p>
       )}

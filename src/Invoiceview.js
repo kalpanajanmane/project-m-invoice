@@ -189,14 +189,15 @@ if (invoice && invoice.invoicedetails) {
 
 <div>
 
-<div class="container">
+<div class="container original">
 <p class="copy">
     <b>ORIGINAL COPY</b>
 </p>
 <div class="content">
-    <div id="background">
-        <p id="bg-text">MAHAVEER TRADING COMPANY</p>
+   <div id="background">
+        <p id="bg-text">{invoice.companydetails.companyname}</p>
     </div>
+
     <p class="style">
         TAX INVOICE
     </p>
@@ -486,14 +487,15 @@ if (invoice && invoice.invoicedetails) {
 
 </div>
 </div>
-<div class="container">
+<div class="container duplicate">
 <p class="copy">
     <b>DUPLICATE COPY</b>
 </p>
 <div class="content">
     <div id="background">
-        <p id="bg-text">MAHAVEER TRADING COMPANY</p>
+        <p id="bg-text">{invoice.companydetails.companyname}</p>
     </div>
+
     <p class="style">
         TAX INVOICE
     </p>

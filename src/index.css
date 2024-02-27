@@ -215,6 +215,24 @@ table:nth-of-type(2) thead th:nth-child(4) {
   .body {
     margin: 0;
   }
+
+  .original {
+    page-break-after: always;
+    
+  }
+
+  .duplicate {
+    page-break-before: always;
+   
+  }
+
+  .original, .duplicate {
+    page-break-inside: avoid;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+ 
 }
 
 

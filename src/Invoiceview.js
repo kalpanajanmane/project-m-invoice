@@ -10,21 +10,26 @@ function Invoiceview() {
   const { id } = useId(); // Retrieve the invoice ID from context
   const qrCodeValue = `https://project-m-invoice.vercel.app/${id}`;
 
-  useEffect(() => {
-    const fetchInvoice = async () => {
-      try {
-        const API = `https://52.66.122.244:8000/`;
-        const response = await axios.get(`${API}invoice`);
-        const filteredInvoice = response.data.find(
-          (inv) => inv.invoicedetails.invoiceno === id
-        );
+ useEffect(() => {
+  const fetchInvoice = async () => {
+    try {
+      const API = `https://52.66.122.244:8000/`;
+      const response = await axios.get(`${API}invoice`);
+      const filteredInvoice = response.data.find(
+        (inv) => inv._id === id
+      );
+      if (filteredInvoice) {
         setInvoice(filteredInvoice);
-      } catch (error) {
-        console.error("Error fetching Invoice data:", error);
+      } else {
+        console.error("Invoice not found");
       }
-    };
-    fetchInvoice();
-  }, [id]);
+    } catch (error) {
+      console.error("Error fetching Invoice data:", error);
+    }
+  };
+  fetchInvoice();
+}, [id]);
+
 
  // Calculate interStateTax based on company pin code and buyer company state code
  const interStateTax = invoice ? 

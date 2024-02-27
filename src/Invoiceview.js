@@ -15,7 +15,6 @@ function Invoiceview() {
       try {
         const API = `https://52.66.122.244:8000/`;
         const response = await axios.get(`${API}invoice`);
-        console.log(response)
         const filteredInvoice = response.data.find(
           (inv) => inv.invoicedetails.invoiceno === id
         );
@@ -175,8 +174,6 @@ if (invoice && invoice.invoicedetails) {
     }
 
     formattedDateStr = formatDate(originalDate); // Update formattedDateStr within the if block
-
-    console.log(formattedDateStr); // Output: dd/mm/yyyy
 } else {
     console.log("Invoice or invoicedetails are missing.");
 }

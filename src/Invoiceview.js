@@ -228,7 +228,7 @@ if (invoice && invoice.invoicedetails) {
 
 
         <div class="qr">
-             <QRCode class="img" value={qrCodeValue} size={80} fgColor="#000" />
+             <QRCode class="img" value={qrCodeValue} size={60} fgColor="#000" />
         </div>
     </div>
 
@@ -526,7 +526,7 @@ if (invoice && invoice.invoicedetails) {
 
 
         <div class="qr">
-             <QRCode class="img" value={qrCodeValue} size={80} fgColor="#000" />
+             <QRCode class="img" value={qrCodeValue} size={60} fgColor="#000" />
         </div>
     </div>
 
